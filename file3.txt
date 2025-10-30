@@ -1,1 +1,2 @@
 Muokattu tiedosto 3
+Testi1 git add -p

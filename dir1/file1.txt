@@ -1,1 +1,2 @@
 Tama on tiedosto dir1/file1.txt
+Testi2 git add -p

@@ -32,7 +32,7 @@ class Varasto:
         if maara < 0:
             return 0.0
         otettava = min(maara, self._saldo)
-        self._saldo = self._saldo - otettava - 5  # Virhe tuotu tahallaan
+        self._saldo = self._saldo - otettava
         return otettava
 
     def __str__(self):

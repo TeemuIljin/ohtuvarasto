@@ -31,8 +31,8 @@ class Varasto:
     def ota_varastosta(self, maara):
         if maara < 0:
             return 0.0
-        otettava = min(maara, self._saldo)
-        self._saldo = self._saldo - otettava
+        otettava = min(maara, self.saldo)
+        self.saldo = self.saldo - otettava
         return otettava
 
     def __str__(self):

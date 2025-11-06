@@ -1,0 +1,15 @@
+[MASTER]
+ignore=.venv,venv,htmlcov,__pycache__,.pytest_cache
+
+[FORMAT]
+max-line-length=80
+
+[REFACTORING]
+max-nested-blocks=2
+
+[DESIGN]
+max-args=4
+max-statements=15
+
+[BASIC]
+disable=missing-module-docstring,missing-class-docstring,missing-function-docstring

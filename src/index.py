@@ -1,19 +1,20 @@
 from varasto import Varasto
 
 
-def main():
-    mehua = Varasto(100.0)
-    olutta = Varasto(100.0, 20.2)
-
+def print_initial(mehua: Varasto, olutta: Varasto) -> None:
     print("Luonnin jälkeen:")
     print(f"Mehuvarasto: {mehua}")
     print(f"Olutvarasto: {olutta}")
 
+
+def show_olut_getters(olutta: Varasto) -> None:
     print("Olut getterit:")
     print(f"saldo = {olutta.saldo}")
     print(f"tilavuus = {olutta.tilavuus}")
     print(f"paljonko_mahtuu = {olutta.paljonko_mahtuu()}")
 
+
+def do_mehu_setters(mehua: Varasto) -> None:
     print("Mehu setterit:")
     print("Lisätään 50.7")
     mehua.lisaa_varastoon(50.7)
@@ -22,6 +23,8 @@ def main():
     mehua.ota_varastosta(3.14)
     print(f"Mehuvarasto: {mehua}")
 
+
+def show_error_cases(olutta: Varasto, mehua: Varasto) -> None:
     print("Virhetilanteita:")
     print("Varasto(-100.0);")
     huono = Varasto(-100.0)
@@ -52,6 +55,16 @@ def main():
     saatiin = mehua.ota_varastosta(-32.9)
     print(f"saatiin {saatiin}")
     print(f"Mehuvarasto: {mehua}")
+
+
+def main() -> None:
+    mehua = Varasto(100.0)
+    olutta = Varasto(100.0, 20.2)
+
+    print_initial(mehua, olutta)
+    show_olut_getters(olutta)
+    do_mehu_setters(mehua)
+    show_error_cases(olutta, mehua)
 
 
 if __name__ == "__main__":

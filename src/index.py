@@ -19,19 +19,16 @@ def do_mehu_setters(mehua: Varasto) -> None:
     print("Lisätään 50.7")
     mehua.lisaa_varastoon(50.7)
     print(f"Mehuvarasto: {mehua}")
-    
     print("Otetaan 3.14")
     mehua.ota_varastosta(3.14)
     print(f"Mehuvarasto: {mehua}")
 
 
-def show_error_cases(olutta: Varasto, mehua: Varasto) -> None:
+def show_error_cases() -> None:
     print("Virhetilanteita:")
     print("Varasto(-100.0);")
-    
     huono = Varasto(-100.0)
     print(huono)
-
     print("Varasto(100.0, -50.7)")
     huono = Varasto(100.0, -50.7)
     print(huono)
@@ -46,7 +43,6 @@ def show_addition_errors(olutta: Varasto, mehua: Varasto) -> None:
     print("mehua.lisaa_varastoon(-666.0)")
     mehua.lisaa_varastoon(-666.0)
     print(f"Mehuvarasto: {mehua}")
-    
 
 def show_take_errors(olutta: Varasto, mehua: Varasto) -> None:
     print(f"Olutvarasto: {olutta}")
@@ -54,13 +50,12 @@ def show_take_errors(olutta: Varasto, mehua: Varasto) -> None:
     saatiin = olutta.ota_varastosta(1000.0)
     print(f"saatiin {saatiin}")
     print(f"Olutvarasto: {olutta}")
-
     print(f"Mehuvarasto: {mehua}")
     print("mehua.ota_varastosta(-32.9)")
     saatiin = mehua.ota_varastosta(-32.9)
     print(f"saatiin {saatiin}")
     print(f"Mehuvarasto: {mehua}")
-
+    
 
 def main() -> None:
     mehua = Varasto(100.0)
@@ -69,7 +64,7 @@ def main() -> None:
     print_initial(mehua, olutta)
     show_olut_getters(olutta)
     do_mehu_setters(mehua)
-    show_error_cases(olutta, mehua)
+    show_error_cases()
 
 
 if __name__ == "__main__":

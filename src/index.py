@@ -6,13 +6,11 @@ def print_initial(mehua: Varasto, olutta: Varasto) -> None:
     print(f"Mehuvarasto: {mehua}")
     print(f"Olutvarasto: {olutta}")
 
-
 def show_olut_getters(olutta: Varasto) -> None:
     print("Olut getterit:")
     print(f"saldo = {olutta.saldo}")
     print(f"tilavuus = {olutta.tilavuus}")
     print(f"paljonko_mahtuu = {olutta.paljonko_mahtuu()}")
-
 
 def do_mehu_setters(mehua: Varasto) -> None:
     print("Mehu setterit:")
@@ -22,7 +20,6 @@ def do_mehu_setters(mehua: Varasto) -> None:
     print("Otetaan 3.14")
     mehua.ota_varastosta(3.14)
     print(f"Mehuvarasto: {mehua}")
-
 
 def show_error_cases() -> None:
     print("Virhetilanteita:")
@@ -50,12 +47,12 @@ def show_take_errors(olutta: Varasto, mehua: Varasto) -> None:
     saatiin = olutta.ota_varastosta(1000.0)
     print(f"saatiin {saatiin}")
     print(f"Olutvarasto: {olutta}")
+    
     print(f"Mehuvarasto: {mehua}")
     print("mehua.ota_varastosta(-32.9)")
     saatiin = mehua.ota_varastosta(-32.9)
     print(f"saatiin {saatiin}")
     print(f"Mehuvarasto: {mehua}")
-    
 
 def main() -> None:
     mehua = Varasto(100.0)
